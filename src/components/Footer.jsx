@@ -1,12 +1,12 @@
 import { Facebook, Instagram, MailOutline, Phone, Pinterest, Room, Search, Twitter } from "@material-ui/icons"
 import styled from "styled-components"
 import { mobile } from "../responsive";
-
+import {FooterInfo} from "../data";
 const Container = styled.div`
     display:flex;
     ${mobile({
-        flexDirection: "column"
-    })}
+    flexDirection: "column"
+})}
 `
 const Left = styled.div`
     flex:1;
@@ -40,8 +40,8 @@ const Center = styled.div`
     flex:1;
     padding:20px;
     ${mobile({
-        display: "none"
-    })}
+    display: "none"
+})}
 `
 const Title = styled.h3`
     margin-bottom: 30px;
@@ -62,8 +62,8 @@ const Right = styled.div`
     flex:1;
     padding:20px;
     ${mobile({
-        backgroundColor: "#fff8f8"
-    })}
+    backgroundColor: "#fff8f8"
+})}
 `
 const ContactItem = styled.div`
     margin-bottom: 20px;
@@ -80,7 +80,7 @@ const Footer = () => {
             <Left>
                 <Logo>GOLD.</Logo>
                 <Desc>
-                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some from, by injected humour, or randomised words which don't look even slightly believable.
+                    {FooterInfo.introduction}
                 </Desc>
                 <SocialContainer>
                     <SocialIcon color="3B5999">
@@ -100,28 +100,43 @@ const Footer = () => {
             <Center>
                 <Title>Useful Links</Title>
                 <List>
-                    <ListItem>Home</ListItem>
-                    <ListItem>Cart</ListItem>
-                    <ListItem>Man Fashion</ListItem>
-                    <ListItem>Woman Fashion</ListItem>
-                    <ListItem>Accessories</ListItem>
-                    <ListItem>My Account</ListItem>
-                    <ListItem>Order Tracking</ListItem>
-                    <ListItem>Wishlist</ListItem>
-                    <ListItem>Wishlist</ListItem>
-                    <ListItem>Terms</ListItem>
+                    <ListItem onClick={(e) => {
+                        e.preventDefault();
+                        window.location.href = "/";
+                    }}>Trang Chủ</ListItem>
+                    <ListItem onClick={(e) => {
+                        e.preventDefault();
+                        window.location.href = "/cart";
+                    }}>Giỏ Hàng</ListItem>
+                    <ListItem onClick={(e) => {
+                        e.preventDefault();
+                        window.location.href = "/login";
+                    }}>My Account</ListItem>
+                    <ListItem onClick={(e) => {
+                        e.preventDefault();
+                        window.location.href = "/";
+                    }}>Theo dõi đơn hàng</ListItem>
+                    <ListItem onClick={(e) => {
+                        e.preventDefault();
+                        window.location.href = "/";
+                    }}>Danh sách yêu thích</ListItem>
+                    
+                    <ListItem onClick={(e) => {
+                        e.preventDefault();
+                        window.location.href = "/";
+                    }}>Chính sách và điều khoản</ListItem>
                 </List>
             </Center>
             <Right>
                 <Title>Contact</Title>
                 <ContactItem>
-                  <Room style={{marginRight:"10px"}} />  Q7, HCM
+                    <Room style={{ marginRight: "10px" }} />  Q7, HCM
                 </ContactItem>
                 <ContactItem>
-                  <Phone style={{marginRight:"10px"}} />  090xxxxx
+                    <Phone style={{ marginRight: "10px" }} />  090xxxxx
                 </ContactItem>
                 <ContactItem>
-                   <MailOutline style={{marginRight:"10px"}} /> ducmandev@gmail.com
+                    <MailOutline style={{ marginRight: "10px" }} /> ducmandev@gmail.com
                 </ContactItem>
                 <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
             </Right>

@@ -47,7 +47,10 @@ const CategoryItem = ({item}) => {
             <Title>
                 {item.title}
             </Title>
-            <Button>SHOP NOW</Button>
+            <Button onClick={(e) => {
+                        e.preventDefault();
+                        window.location.href=item.href;
+                    }}>SHOP NOW</Button>
         </Info>
     </Container>
   )
