@@ -1,7 +1,7 @@
 export const sliderItems = [
     {
       id: 1,
-      img: "/DSC05860_2.ARW.jpg",
+      img: "https://toplist.vn/images/800px/tap-doan-vang-bac-da-quy-phu-quy-574140.jpg",
       title: "SUMMER SALE",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
       bg: "f5fafd",
@@ -15,7 +15,7 @@ export const sliderItems = [
     },
     {
       id: 3,
-      img: "/DSC05867_2.ARW.jpg",
+      img: "https://cly.1cdn.vn/2022/08/02/vang.jpeg",
       title: "LOUNGEWEAR LOVE",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
       bg: "fbf0f4",
@@ -26,17 +26,17 @@ export const sliderItems = [
 export const categories = [
     {
       id: 1,
-      img: "https://images.pexels.com/photos/5886041/pexels-photo-5886041.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      img: "https://cafefcdn.com/zoom/600_315/203337114487263232/2022/3/1/photo1646127260549-16461272606381732290496.jpeg",
       title: "SHIRT STYLE!",
     },
     {
       id: 2,
-      img: "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      img: "https://cafefcdn.com/thumb_w/650/203337114487263232/2022/3/11/photo1646992845971-16469928474922017051797.jpg",
       title: "LOUNGEWEAR LOVE",
     },
     {
       id: 3,
-      img: "https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      img: "https://cdn.pnj.io/images/tin-tuc/2018/09/tung-bung-uu-dai-mung-khai-truong-trung-tam-kim-hoan-pnj-cam-pha-02.jpg?1538110023771",
       title: "LIGHT JACKETS",
     },
   ];
@@ -44,34 +44,34 @@ export const categories = [
   export const popularProducts = [
     {
       id:1,
-      img:"https://d3o2e4jr3mxnm3.cloudfront.net/Mens-Jake-Guitar-Vintage-Crusher-Tee_68382_1_lg.png",
+      img:"https://images.foody.vn/res/g24/239839/prof/s576x330/foody-mobile-m-dung-jpg-991-636003970927804365.jpg",
     },
     {
       id:2,
-      img:"https://www.prada.com/content/dam/pradabkg_products/U/UC4/UC474E/180F0008/UC474E_180_F0008_S_222_SLF.jpg/jcr:content/renditions/cq5dam.web.hebebed.800.800.jpg",
+      img:"https://giadinh.mediacdn.vn/296230595582509056/2022/3/14/gia-vang-16472279155331972554443.jpg",
     },
     {
       id:3,
-      img:"https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
+      img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7tlt5G4LPApie_tPCupF6fKoZV3IVxU33vMg1ztb8ENC1UqmKhHiwuKHgK3EJGvrNigU&usqp=CAU",
     },
     {
       id:4,
-      img:"https://www.burdastyle.com/pub/media/catalog/product/cache/7bd3727382ce0a860b68816435d76e26/107/BUS-PAT-BURTE-1320516/1170x1470_BS_2016_05_132_front.png",
+      img:"https://giadinh.mediacdn.vn/296230595582509056/2022/3/7/gia-vang-16466219532052046850832.jpg",
     },
     {
       id:5,
-      img:"https://images.ctfassets.net/5gvckmvm9289/3BlDoZxSSjqAvv1jBJP7TH/65f9a95484117730ace42abf64e89572/Noissue-x-Creatsy-Tote-Bag-Mockup-Bundle-_4_-2.png",
+      img:"https://xosovietlott.net/wp-content/uploads/2020/12/gia-vang-hom-nay-21-12-02.jpg",
     },
     {
       id:6,
-      img:"https://d3o2e4jr3mxnm3.cloudfront.net/Rocket-Vintage-Chill-Cap_66374_1_lg.png",
+      img:"https://vtv1.mediacdn.vn/thumb_w/650/2020/7/21/vang210720-1595298504413472326839.png",
     },
     {
       id:7,
-      img:"https://www.prada.com/content/dam/pradabkg_products/U/UC4/UC474E/180F0008/UC474E_180_F0008_S_222_MDD.jpg/_jcr_content/renditions/cq5dam.web.hebebed.1000.1000.jpg",
+      img:"https://media.thuonghieucongluan.vn/uploads/2020/08/02/323-1596322447.jpg",
     },
     {
       id:8,
-      img:"https://www.pngarts.com/files/3/Women-Jacket-PNG-High-Quality-Image.png",
+      img:"https://file3.qdnd.vn/data/images/0/2022/05/25/tranhoai/gia%20vang%20the%20gioi%2026-5.jpg?dpi=150&quality=100&w=870",
     },
   ]
