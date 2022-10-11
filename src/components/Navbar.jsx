@@ -79,6 +79,9 @@ const Navbar = () => {
     const handleClick = () => {
         navigate("/");
     }
+    const movecart = () =>{
+        navigate("/cart");
+    }
 
     return (
         <Container>
@@ -96,7 +99,7 @@ const Navbar = () => {
                 <Right>
                     <MenuItem><URLItem href='/register'>ĐĂNG KÍ</URLItem></MenuItem>
                     <MenuItem><URLItem href='/login'>ĐĂNG NHẬP</URLItem></MenuItem>
-                    <MenuItem>
+                    <MenuItem onClick={movecart} >
                         <Badge badgeContent={4} color="primary">
                             <ShoppingCartOutlined />
                         </Badge>
