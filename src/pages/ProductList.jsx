@@ -1,10 +1,12 @@
-import styled from "styled-components"
-import Navbar from "../components/Navbar"
-import Announcement from "../components/Announcement"
-import { Products } from "../components/Products"
-import Footer from "../components/Footer"
-import Newsletter from "../components/Newsletter"
-import { mobile } from "../responsive"
+import styled from "styled-components";
+import Navbar from "../components/Navbar";
+import Announcement from "../components/Announcement";
+import Products from "../components/Products";
+import Newsletter from "../components/Newsletter";
+import Footer from "../components/Footer";
+import { mobile } from "../responsive";
+import { useLocation } from "react-router-dom";
+import { useState } from "react";
 
 const Container = styled.div`
 
@@ -45,6 +47,18 @@ const Option = styled.option`
 `
 
 const ProductList = () => {
+    const location = useLocation();
+    const cat = location.pathname.split("/")[2];
+    const [filters, setFilters] = useState({});
+    const [sort, setSorts] = useState("newest");
+
+    const handleFilters = (e)=>{
+        const value = e.target.value;
+        setFilters({
+            ...filters,
+            [e.target.name] : value,
+        });
+    };
     return (
         <Container>
             <Navbar />
@@ -53,18 +67,19 @@ const ProductList = () => {
             <FilterContainer>
                 <Filter>
                     <FilterText>Bộ lọc sản phẩm:</FilterText>
-                    <Select>
-                        <Option disabled selected>
-                            Màu sắc
+                    <Select name="color" onChange={handleFilters}>
+                        <Option value="">
+                            All
                         </Option>
-                        <Option>Trắng</Option>
-                        <Option>Vàng</Option>
-                        <Option>Xanh Dương</Option>
-                        <Option>Đỏ</Option>
+                        <Option value="white">Trắng</Option>
+                        <Option value="yellow">Vàng</Option>
+                        <Option value="#5505D3">Tím than</Option>
+                        <Option value="#FD6C9E">Hồng nhạt</Option>
+                        <Option value="red">Đỏ</Option>
                         
                     </Select>
-                    <Select>
-                        <Option disabled selected>
+                    <Select name="size" onChange={handleFilters}>
+                        <Option value="">
                             Size
                         </Option>
                         <Option>XS</Option>
@@ -76,16 +91,14 @@ const ProductList = () => {
                 </Filter>
                 <Filter>
                     <FilterText>Sắp xếp:</FilterText>
-                    <Select>
-                    <Option selected>
-                        Mới nhất
-                    </Option>
-                    <Option>Giá tăng dần</Option>
-                    <Option>Giá giảm dần</Option>
+                    <Select onChange={(e)=>setSorts(e.target.value)}>
+                    <Option value="newest">Mới Nhất</Option>
+                    <Option value="asc">Giá tăng dần</Option>
+                    <Option value="desc">Giá giảm dần</Option>
                 </Select>
                 </Filter>
             </FilterContainer>
-            <Products />
+            <Products cat={cat} filters={filters} sort={sort} />
             <Newsletter />
             <Footer />
         </Container>

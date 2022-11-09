@@ -25,22 +25,22 @@ export const sliderItems = [
 
 export const categories = [
     {
-      id: 1,
+      _id: 1,
       img: "https://cafefcdn.com/zoom/600_315/203337114487263232/2022/3/1/photo1646127260549-16461272606381732290496.jpeg",
       title: "VÀNG KHỐI",
-      href:"/products/vangkhoi",
+      cat:"vangkhoi",
     },
     {
-      id: 2,
+      _id: 2,
       img: "https://cafefcdn.com/thumb_w/650/203337114487263232/2022/3/11/photo1646992845971-16469928474922017051797.jpg",
       title: "VÀNG THỎI",
-      href:"/products/vangthoi",
+      cat:"vangthoi",
     },
     {
-      id: 3,
+      _id: 3,
       img: "https://cdn.pnj.io/images/tin-tuc/2018/09/tung-bung-uu-dai-mung-khai-truong-trung-tam-kim-hoan-pnj-cam-pha-02.jpg?1538110023771",
       title: "ĐÁ QUÝ, KIM CƯƠNG",
-      href:"/products/kc",
+      cat:"kc",
     },
   ];
 

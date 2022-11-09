@@ -7,20 +7,17 @@ import Cart from "./pages/Cart";
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
-  Navigate
 } from "react-router-dom";
 import ErrorPage from "./pages/error-page";
-import { RequireAuth } from "./pages/RequireAuth";
+import  RequireAuth  from "./pages/RequireAuth";
 
 
 const App = () => {
-  const user = true;
   const router = createBrowserRouter([
     {
       path: "/",
       element: <Home />,
-      errorElement: <Home/>
+      errorElement: <ErrorPage/>
     },
     {
       path:"/products/:category",

@@ -1,9 +1,11 @@
 import { Badge } from '@material-ui/core'
 import { Search, ShoppingCartOutlined } from '@material-ui/icons'
 import React from 'react'
-import { Navigate, useNavigate } from 'react-router-dom'
+import { Link,useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import { mobile } from "../responsive"
+import { useSelector,useDispatch } from "react-redux";
+import {logoutUser}  from "../redux/userRedux"
 
 const Container = styled.div`
     height :60px;
@@ -68,12 +70,32 @@ const MenuItem = styled.div`
     margin-left: 25px;
     ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
-const URLItem = styled.a`
-text-decoration: none;
-color:black;
-`
+
 
 const Navbar = () => {
+    const quantity = useSelector(state => state.cart.quantity);
+    const user = useSelector(state => state.user.currentUser);
+    const navigate = useNavigate();
+    const dispatch = useDispatch()
+
+
+    const handleClickUser = (actionkey) =>{
+        console.log(actionkey)
+        // hand login, logout, register
+        if (actionkey === "register"){
+            navigate("/"+ actionkey, { replace: true });
+        }
+        else if (actionkey === "login"){
+            navigate("/"+ actionkey, { replace: true });
+        }else{
+            //Clear state login user
+            dispatch(
+                logoutUser()
+              );
+            
+        }
+    }
+
     return (
         <Container>
             <Wrapper>
@@ -87,21 +109,27 @@ const Navbar = () => {
                 <Center>
                     <Logo onClick={(e) => {
                         e.preventDefault();
-                        window.location.href="/";
+                        window.location.href = "/";
                     }}>GOLD</Logo>
                 </Center>
                 <Right>
-                    <MenuItem><URLItem href='/register'>ĐĂNG KÍ</URLItem></MenuItem>
-                    <MenuItem><URLItem href='/login'>ĐĂNG NHẬP</URLItem></MenuItem>
-                    <MenuItem onClick={(e) => {
-                        e.preventDefault();
-                        window.location.href = '/cart';
-                    }} >
-                        <Badge badgeContent={4} color="primary">
-                            <ShoppingCartOutlined />
-                        </Badge>
-                    </MenuItem>
-                    <MenuItem></MenuItem>
+                    <MenuItem onClick={()=>handleClickUser("register")}>ĐĂNG KÍ</MenuItem>
+                    {user ?
+                        (<><MenuItem>Chào {user.username} </MenuItem><MenuItem onClick={() => handleClickUser("logout")}>
+                            ĐĂNG XUẤT
+                        </MenuItem></>)
+                        :
+                        <MenuItem onClick={()=>handleClickUser("login")}>
+                            ĐĂNG NHẬP
+                        </MenuItem>
+                    }
+                    <Link to="/cart">
+                        <MenuItem>
+                            <Badge overlap="rectangular" badgeContent={quantity} color="primary">
+                                <ShoppingCartOutlined />
+                            </Badge>
+                        </MenuItem>
+                    </Link>
                 </Right>
             </Wrapper>
         </Container>
