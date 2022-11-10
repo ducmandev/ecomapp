@@ -33,7 +33,6 @@ const cartSlice = createSlice({
                 state.products[objIndex].quantity += 1;
                 state.total += state.products[objIndex].price * 1;
             }
-            //state.products.quantity += 1;
         },
         decrement: (state, id) => {
             const objIndex1 = state.products.findIndex((e => e.idcart === id.payload));

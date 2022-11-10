@@ -1,23 +1,23 @@
 export const sliderItems = [
     {
       id: 1,
-      img: "https://toplist.vn/images/800px/tap-doan-vang-bac-da-quy-phu-quy-574140.jpg",
+      img: "https://bucket.nhanh.vn/store/10179/ps/20220611/BS434_DOT_1_copy.png",
       title: "NGỌC TRÂN CHÂU",
-      desc: "DÂY CHUYỀN VÀNG TRẮNG ĐÍNH KIM CƯƠNG. SIÊU PHẨM DẠ TIỆC.",
+      desc: "MẪU BIKINI HOT NHẤT NĂM 2022",
       bg: "f5fafd",
     },
     {
       id: 2,
-      img: "https://cdn.muabannhanh.com/asset/frontend/img/gallery/2018/10/11/5bbec202b8280_1539228162.jpg",
+      img: "https://cdn.jamja.vn/blog/wp-content/uploads/2018/01/trang-phuc-du-tiec-cuoi-cho-nu-3.jpg",
       title: "KHỐI HOÀN HẢO",
-      desc: "BỘ 3 TRANG SỨC HOÀN HẢO CHO NGƯỜI ĐÀN ÔNG THÀNH ĐẠT.",
+      desc: "TRANG PHỤC DỰ TIỆC CAO CẤP, HOÀN HẢO CHO MỌI LỨA TUỔI",
       bg: "fcf1ed",
     },
     {
       id: 3,
-      img: "https://cly.1cdn.vn/2022/08/02/vang.jpeg",
-      title: "VÀNG RỒNG",
-      desc: "VÀNG NGUYÊN KHỐI 9999. ĐƯỢC ĐẢM BẢO GIAO DỊCH.",
+      img: "/gioitre.jpg",
+      title: "TƯƠI TẮN",
+      desc: "BỘ SƯU TẬP CHO GIỚI TRẺ, MANG MÀU SẮC TRẺ TRUNG NĂNG ĐỘNG",
       bg: "fbf0f4",
     },
   ];
@@ -26,22 +26,16 @@ export const sliderItems = [
 export const categories = [
     {
       _id: 1,
-      img: "https://cafefcdn.com/zoom/600_315/203337114487263232/2022/3/1/photo1646127260549-16461272606381732290496.jpeg",
-      title: "VÀNG KHỐI",
-      cat:"vangkhoi",
+      img: "https://cdn.tgdd.vn/Products/Images/10100/280691/ao-polo-lifestyle-nam-puma-533742-02-1-1.jpg",
+      title: "Áo",
+      cat:"ao",
     },
     {
       _id: 2,
-      img: "https://cafefcdn.com/thumb_w/650/203337114487263232/2022/3/11/photo1646992845971-16469928474922017051797.jpg",
-      title: "VÀNG THỎI",
-      cat:"vangthoi",
-    },
-    {
-      _id: 3,
-      img: "https://cdn.pnj.io/images/tin-tuc/2018/09/tung-bung-uu-dai-mung-khai-truong-trung-tam-kim-hoan-pnj-cam-pha-02.jpg?1538110023771",
-      title: "ĐÁ QUÝ, KIM CƯƠNG",
-      cat:"kc",
-    },
+      img: "https://cdn.tgdd.vn/Products/Images/10107/259844/non-luoi-trai-tap-luyen-unisex-reebok-gh039-1.jpg",
+      title: "Nón",
+      cat:"non",
+    }
   ];
 
   export const popularProducts = [
@@ -80,5 +74,5 @@ export const categories = [
   ]
 
   export const FooterInfo = {
-    introduction :"2022 - Công ty GOLD. Chuyên cung cấp vàng chất lượng cao. Ngoài ra chúng tôi còn có các trang sức độc nhất."
+    introduction :"2022 - GOLD. Thương hiệu trang phục cao cấp."
   }
